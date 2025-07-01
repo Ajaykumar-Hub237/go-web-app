@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-web-app
+  labels:
+    app: go-web-app
+spec:
+  type: NodePort  # Set the service type to NodePort
+  selector:
+    app: go-web-app  # Ensure the selector matches your pod labels
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+      nodePort: 31243  # Specify the nodePort here
