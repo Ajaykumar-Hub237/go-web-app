@@ -8,7 +8,7 @@ image:
   repository: samley/go-web-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "16020955606"
+  tag: "16021296949"
 
 ingress:
   enabled: false
