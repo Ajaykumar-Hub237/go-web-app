@@ -1,6 +1,6 @@
-# Go Web Application
+# End-to-End CI/CD Pipeline for A Go Web App On AWS EKS with GitHub Actions, Argo CD & Helm
 
-This is a simple website written in Golang. It uses the `net/http` package to serve HTTP requests.
+This project demonstrates a fully automated, production-grade CI/CD pipeline for a Go (Golang) web application. It uses Docker, GitHub Actions for continuous integration, Argo CD for GitOps-based continuous delivery, and Helm to manage Kubernetes manifests on AWS EKS.
 
 ## Running the server
 
