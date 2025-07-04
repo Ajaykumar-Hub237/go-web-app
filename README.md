@@ -66,6 +66,22 @@ The server will start on port 8080. You can access it by navigating to `http://l
 
 ## Looks like this
 
-![Website](static/images/golang-website.png)
+![Website](static/images/golang-website.png) 
+
+## Build & Run With Docker
+
+```
+docker build -t go-web-app .
+```
+
+![GoProj2](https://github.com/user-attachments/assets/8dd5376f-2591-4809-a983-ddf26a8622c0)
+
+```
+docker run -p 8000:8000 -it go-web-app
+```
+
+![goProj3](https://github.com/user-attachments/assets/7456e856-ff22-4c59-8700-2152a0a5388c)
+
+
 
 
