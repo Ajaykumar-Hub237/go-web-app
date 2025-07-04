@@ -25,6 +25,7 @@ This project demonstrates a fully automated, production-grade CI/CD pipeline for
 - 🔁 GitOps with Argo CD for continuous delivery on AWS EKS
 - ☁️ Optimized for cost-effective, scalable infrastructure using AWS Free Tier
 
+```
 go-web-app/
 ├── .github/
 │   └── workflows/
@@ -50,7 +51,7 @@ go-web-app/
 │   ├── deployment.yaml
 │   ├── service.yaml
 │   └── ingress.yaml
-
+```
 
 
 ## Running the server
