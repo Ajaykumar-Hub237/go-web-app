@@ -82,6 +82,72 @@ docker run -p 8000:8000 -it go-web-app
 
 ![goProj3](https://github.com/user-attachments/assets/7456e856-ff22-4c59-8700-2152a0a5388c)
 
+ ## Tag Docker Image
+Using the command below:
+
+```
+docker tag go-webapp <your-dockerhub-username>/go-webapp:latest
+```
+
+Then, using mine: 
+
+```
+docker tag go-web-app samley/go-web-app:latest
+```
+
+## Push to Docker Hub
+Using the command below:
+
+```
+docker push <your-dockerhub-username>/go-webapp:latest
+```
+
+Then implementing it, :
+
+```
+docker push samley/go-web-app:latest
+```
+
+![GoProj4](https://github.com/user-attachments/assets/b38cf3b7-2abf-42a0-9c60-931dc78c135d)
+
+## Kubernetes Deployment
+
+Since we are using EKS, we need to authenticate our AWS account with our local machine. 
+Ensure you have the AWS CLI installed on your local machine. 
+
+On your terminal or command prompt, run the command below : 
+
+```
+aws configure
+```
+
+You will be prompted to enter:
+**AWS Access Key ID:** Obtain this from your AWS Management Console (under IAM > Users > Your User > Security credentials).
+**AWS Secret Access Key:** Also obtained from IAM as above.
+**Default region name:** Specify the AWS region you want to work in (e.g., us-east-1).
+
+Next, install EKS 
+
+```
+eksctl create cluster --name demo-cluster
+```
+
+## Deployment Steps
+
+```
+kubectl apply -f k8s/manifests/deployment.yaml
+kubectl apply -f k8s/manifests/service.yaml
+kubectl apply -f k8s/manifests/ingress.yaml
+```
+
+![GoProj5](https://github.com/user-attachments/assets/446247b3-93c1-4c81-8f4a-acadf2cad8f8)
+
+![GoProj6](https://github.com/user-attachments/assets/7006b059-2f05-45cb-bc15-d02548cf1ee1)
+
+
+
+
+
 
 
 
