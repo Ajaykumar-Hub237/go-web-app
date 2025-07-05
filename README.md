@@ -154,6 +154,12 @@ We do that by editing the Service.yaml type to Nodeport using the command below 
 kubectl edit svc go-web-app
 ```
 
+To get the Service.yaml port number, we use the command :
+
+```
+kubectl get svc
+```
+
 ![GoProj7](https://github.com/user-attachments/assets/747602ea-94df-44a2-be4a-5f18803b9cdd)
 
 To get the nodes IP address : 
