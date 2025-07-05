@@ -123,7 +123,9 @@ aws configure
 
 You will be prompted to enter:
 **AWS Access Key ID:** Obtain this from your AWS Management Console (under IAM > Users > Your User > Security credentials).
+
 **AWS Secret Access Key:** Also obtained from IAM as above.
+
 **Default region name:** Specify the AWS region you want to work in (e.g., us-east-1).
 
 Next, install EKS 
