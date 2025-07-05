@@ -147,9 +147,24 @@ kubectl apply -f k8s/manifests/ingress.yaml
 
 ![GoProj6](https://github.com/user-attachments/assets/7006b059-2f05-45cb-bc15-d02548cf1ee1)
 
+To ensure that the service.yaml is working fine, let's expose the service in NodePort mode.
+We do that by editing the Service.yaml type to Nodeport using the command below :
+
+```
+kubectl edit svc go-web-app
+```
+
 ![GoProj7](https://github.com/user-attachments/assets/747602ea-94df-44a2-be4a-5f18803b9cdd)
 
+To get the nodes IP address : 
+
+```
+kubectl get nodes -o wide
+```
+
 ![GoProj8](https://github.com/user-attachments/assets/2a0d7d94-1fc1-4f1e-8681-9b8152a1c813)
+
+Now, to access the application on the Kubernetes Cluster, we take the external IP, with the port number.
 
 ![GoProj9](https://github.com/user-attachments/assets/2fed7370-dec1-439f-b2a6-c72d54384353)
 
