@@ -172,7 +172,7 @@ kubectl get nodes -o wide
 
 Now, to access the application on the Kubernetes Cluster, we take the external IP of the node and the port number. 
 
-https://<External IP>:<go-web-app port number>//courses
+https://<External IP>:<go-web-app port number>/courses
 
 ![GoProj9](https://github.com/user-attachments/assets/2fed7370-dec1-439f-b2a6-c72d54384353)
 
