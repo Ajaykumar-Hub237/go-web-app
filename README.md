@@ -176,6 +176,23 @@ https://<External IP>:<go-web-app port number>/courses
 
 ![GoProj9](https://github.com/user-attachments/assets/2fed7370-dec1-439f-b2a6-c72d54384353)
 
+The next step is to create the nginx controller 
+
+![GoProj10](https://github.com/user-attachments/assets/96230424-26ea-4fb0-8efd-7a3339fb8122)
+
+Next, to ensure the Ingress Controller watches the Ingress Resource, we use the command:
+
+```
+kubectl get ing
+```
+![GoProj11](https://github.com/user-attachments/assets/3e4d8f83-54f3-45cb-bcdc-dd8f5f93e5d1)
+
+## DNS Mapping
+
+![GoProj12](https://github.com/user-attachments/assets/7d5ae032-b060-44ae-8636-11c4bb470c07)
+
+
+
 
 
 
