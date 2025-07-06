@@ -176,7 +176,11 @@ https://<External IP>:<go-web-app port number>/courses
 
 ![GoProj9](https://github.com/user-attachments/assets/2fed7370-dec1-439f-b2a6-c72d54384353)
 
-The next step is to create the nginx controller 
+## Install Nginx Ingress Controller On AWS
+
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.1/deploy/static/provider/aws/deploy.yaml
+```
 
 ![GoProj10](https://github.com/user-attachments/assets/96230424-26ea-4fb0-8efd-7a3339fb8122)
 
