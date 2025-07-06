@@ -170,13 +170,14 @@ kubectl get nodes -o wide
 
 ![GoProj8](https://github.com/user-attachments/assets/2a0d7d94-1fc1-4f1e-8681-9b8152a1c813)
 
-Now, to access the application on the Kubernetes Cluster, we take the external IP of the node and the port number. 
+To access the application on the Kubernetes Cluster, we need to obtain the external IP address of the node and the port number. 
 
 https://<External IP>:<go-web-app port number>/courses
 
 ![GoProj9](https://github.com/user-attachments/assets/2fed7370-dec1-439f-b2a6-c72d54384353)
 
 ## Install Nginx Ingress Controller On AWS
+This will create a Network Load Balancer. It can be done using the command below:
 
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.1/deploy/static/provider/aws/deploy.yaml
