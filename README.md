@@ -190,6 +190,8 @@ Next, to ensure the Ingress Controller watches the Ingress Resource, we use the 
 ```
 kubectl get ing
 ```
+
+It gives us the FQDN, the Fully Qualified Domain Name. 
 ![GoProj11](https://github.com/user-attachments/assets/3e4d8f83-54f3-45cb-bcdc-dd8f5f93e5d1)
 
 ## DNS Mapping
