@@ -196,7 +196,58 @@ It gives us the FQDN, the Fully Qualified Domain Name.
 
 ## DNS Mapping
 
+To get the IP address of the load balancer, we use the command: 
+
+```
+nslookup <DNS name>
+```
+
+Next, we proceed to map the DNS with the IP address, using the command below:
+
+```
+sudo vim /etc/hosts/
+```
+
 ![GoProj12](https://github.com/user-attachments/assets/7d5ae032-b060-44ae-8636-11c4bb470c07)
+
+## Helm Package Setup
+Let's install Helm first on our machine.
+
+**For Windows:**
+**Using Chocolatey:**
+
+First, install Chocolatey if you haven't already.Open an administrative Command Prompt and run:
+
+```
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+```
+
+**Install Helm:**
+
+```
+choco install kubernetes-helm
+```
+
+**Verify Installation:**
+
+```
+helm version
+```
+
+**For Linux:**
+**Download Helm**
+
+```
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+```
+
+**Verify Installation:**
+
+```
+helm version
+```
+
+
 
 
 
