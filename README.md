@@ -214,9 +214,10 @@ sudo vim /etc/hosts/
 Let's install Helm first on our machine.
 
 **For Windows:**
+
 **Using Chocolatey:**
 
-First, install Chocolatey if you haven't already.Open an administrative Command Prompt and run:
+First, install Chocolatey if you haven't already. Open an administrative Command Prompt and run:
 
 ```
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
@@ -225,7 +226,7 @@ First, install Chocolatey if you haven't already.Open an administrative Command 
 **Install Helm:**
 
 ```
-choco install kubernetes-helm
+choco install Kubernetes-helm
 ```
 
 **Verify Installation:**
@@ -235,6 +236,7 @@ helm version
 ```
 
 **For Linux:**
+
 **Download Helm**
 
 ```
