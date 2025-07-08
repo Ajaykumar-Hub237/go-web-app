@@ -249,6 +249,21 @@ curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 helm version
 ```
 
+## To Create A Directory Structure For The Helm Chart:
+
+In the project folder, create a new directory, Helm, and switch to it.
+
+```mkdir Helm
+   cd Helm
+```
+
+In the Helm Folder, create
+
+```
+helm create go-web-app-chart
+```
+
+
 
 
 
