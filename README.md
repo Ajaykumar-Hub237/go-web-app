@@ -294,7 +294,10 @@ helm uninstall go-web-app
 **In the project folder:**
 -Create this: .github\workflows\ci.yaml
 
-Then, in the file ci.yaml:
+## Continuous Integration Workflow
+This project includes a CI workflow defined in the following YAML file:
+
+[ci.yaml](https://github.com/SamuelUdeh/go-web-app/blob/main/.github/workflows/ci.yaml)
 
 ```
 name: CI/CD
