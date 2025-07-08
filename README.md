@@ -263,6 +263,18 @@ In the Helm Folder, create
 helm create go-web-app-chart
 ```
 
+Deploy using Helm chart in helm/go-web-app-chart:
+
+```
+helm install go-web-app ./go-web-app-chart
+```
+
+![GoProj13](https://github.com/user-attachments/assets/93d27584-aee8-4598-8905-b63bcfa79ea7)
+
+![GoProj14](https://github.com/user-attachments/assets/6b5f704c-4bb0-45bd-9f63-13286a2e7609)
+
+
+
 
 
 
