@@ -174,7 +174,7 @@ To access the application on the Kubernetes Cluster, we need to obtain the exter
 
 https://<External IP>:<go-web-app port number>/courses
 
-![GoProj9](https://github.com/user-attachments/assets/2fed7370-dec1-439f-b2a6-c72d54384353)
+![image](https://github.com/user-attachments/assets/e05c217c-0816-4243-bf9e-8aff6308025f)
 
 ## Install Nginx Ingress Controller On AWS
 This will create a Network Load Balancer. It can be done using the command below:
