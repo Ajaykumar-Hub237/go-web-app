@@ -292,7 +292,9 @@ helm uninstall go-web-app
 **-Update Helm for every commit made(values.yaml)**
 
 **In the project folder:**
--Create this: .github\workflows\ci.yaml
+-Create this:
+
+.github\workflows\ci.yaml
 
 ## Continuous Integration Workflow
 
