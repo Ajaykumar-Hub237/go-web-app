@@ -263,7 +263,7 @@ In the Helm Folder, create
 helm create go-web-app-chart
 ```
 
-Deploy using Helm chart in helm/go-web-app-chart:
+Deploy using Helm chart in /go-web-app-chart/helm:
 
 ```
 helm install go-web-app ./go-web-app-chart
@@ -271,7 +271,114 @@ helm install go-web-app ./go-web-app-chart
 
 ![GoProj13](https://github.com/user-attachments/assets/93d27584-aee8-4598-8905-b63bcfa79ea7)
 
+## To Uninstall Helm: 
+
+```
+helm uninstall go-web-app
+```
+
 ![GoProj14](https://github.com/user-attachments/assets/6b5f704c-4bb0-45bd-9f63-13286a2e7609)
+
+## Implementing CI Using GitHub Actions:
+
+**Multiple Stages of CI:**
+
+**-Build and Unit Test**
+**-Static Code Analysis**
+**-Create Docker Image and Push**
+**-Update Helm for every commit made(values.yaml)**
+
+In the project folder:
+-Create this: .github\workflows\ci.yaml
+
+Then, in the file ci.yaml:
+
+```
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'helm/**'
+      - 'k8s/**'
+      - 'README.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    - name: Set up Go 1.21
+      uses: actions/setup-go@v5
+      with:
+        go-version: 1.21
+    - name: Build
+      run: go build -o go-web-app
+    - name: Test
+      run: go test ./...
+
+  code-quality:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    - name: Set up Go 1.21
+      uses: actions/setup-go@v5
+      with:
+        go-version: 1.21
+    - name: Run golangci-lint
+      uses: golangci/golangci-lint-action@v6
+      with:
+        version: v1.59.1
+        args: --timeout 5m
+
+  push:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    - name: Set up Go 1.21
+      uses: actions/setup-go@v5
+      with:
+        go-version: 1.21
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+    - name: Login to DockerHub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - name: Build and Push action
+      uses: docker/build-push-action@v6
+      with:
+        context: .
+        file: ./Dockerfile
+        push: true
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/go-web-app:${{github.run_id}}
+
+  update-newtag-in-helm-chart:
+    runs-on: ubuntu-latest
+    needs: push
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.TOKEN }}
+    - name: Update tag in Helm chart
+      run: |
+        sed -i 's/tag: .*/tag: "${{github.run_id}}"/' helm/go-web-app-chart/values.yaml
+    - name: Commit and push changes
+      run: |
+        git config --global user.email "samuel.udeh.14@gmail.com"
+        git config --global user.name "SamuelUdeh"
+        git add helm/go-web-app-chart/values.yaml
+        git commit -m "Update tag in Helm chart"
+        git push
+```
 
 
 
