@@ -284,11 +284,14 @@ helm uninstall go-web-app
 **Multiple Stages of CI:**
 
 **-Build and Unit Test**
+
 **-Static Code Analysis**
+
 **-Create Docker Image and Push**
+
 **-Update Helm for every commit made(values.yaml)**
 
-In the project folder:
+**In the project folder:**
 -Create this: .github\workflows\ci.yaml
 
 Then, in the file ci.yaml:
