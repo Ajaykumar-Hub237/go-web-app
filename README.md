@@ -467,7 +467,8 @@ After the YAML files(`deployment.yaml`, `service.yaml`, `ingress.yaml`) have bee
 
 ![GoProj27](https://github.com/user-attachments/assets/41f882a6-ba17-4db9-a0b0-4432e1d3e11a)
 
-✅ Features: 
+
+## Project Features: 
 
 ✅ Lightweight Go web application
 
