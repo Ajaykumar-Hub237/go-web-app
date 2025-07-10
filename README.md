@@ -302,25 +302,25 @@ This project includes a CI workflow defined in the following YAML file:
 
 [ci.yaml](https://github.com/SamuelUdeh/go-web-app/blob/main/.github/workflows/ci.yaml)
 
-This CI pipeline:
+**This CI pipeline:**
 
-## Builds & Tests the Application
+**Builds & Tests the Application**
 
-Compiles the Go app.
+-Compiles the Go app.
 
-Runs unit tests using go test.
+-Runs unit tests using go test.
 
-## Performs Code Quality Checks
+**Performs Code Quality Checks**
 
-Uses golangci-lint to enforce code quality standards.
+-Uses golangci-lint to enforce code quality standards.
 
-## Builds and Pushes Docker Image
+**Builds and Pushes Docker Image**
 
 Builds the Docker image using Dockerfile.
 
 Pushes the image to DockerHub, tagged using the GitHub run ID for traceability.
 
-## Updates Helm Chart Automatically
+**Updates Helm Chart Automatically**
 
 Modifies the tag: field in helm/go-web-app-chart/values.yaml with the new image tag.
 
