@@ -310,7 +310,7 @@ To enable continuous integration and push Docker images from GitHub Actions to D
 | -------------------- | ---------------------------------------------------------------------------------------------------------- |
 | `DOCKERHUB_USERNAME` | Your DockerHub username                                                                                    |
 | `DOCKERHUB_TOKEN`    | DockerHub [personal access token](https://hub.docker.com/settings/security)                                |
-| `GH_TOKEN`           | GitHub [Personal Access Token (PAT)](https://github.com/settings/tokens) with `repo` and `workflow` scopes |
+| `TOKEN`           | GitHub [Personal Access Token (PAT)](https://github.com/settings/tokens) with `repo` and `workflow` scopes |
 
 
 ## How to Add Secrets to Your GitHub Repository
