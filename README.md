@@ -359,9 +359,11 @@ git push origin main
 
 ![GoProj25](https://github.com/user-attachments/assets/ba8227c5-e809-4f1d-b011-e2ec85e0765e)
 
+**Testing the tag, I checked my Dockerhub to confirm the deployment:**
+
 ![GoProj20](https://github.com/user-attachments/assets/68e35bb6-018c-4d3a-82da-40e41918c0be)
 
-Testing the CI implementation, I edited my home page: 
+**Testing the CI implementation, I edited my home page:** 
 
 ![GoProj26](https://github.com/user-attachments/assets/47c7b4fa-6574-4d37-964c-71bfb9a4b048)
 
