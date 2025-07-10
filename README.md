@@ -363,14 +363,6 @@ git push origin main
 
 ![GoProj20](https://github.com/user-attachments/assets/68e35bb6-018c-4d3a-82da-40e41918c0be)
 
-**Testing the CI implementation, I edited my home page by adding my name:** 
-
-![GoProj26](https://github.com/user-attachments/assets/47c7b4fa-6574-4d37-964c-71bfb9a4b048)
-
-**Output of the edited home page:**
-
-![GoProj27](https://github.com/user-attachments/assets/41f882a6-ba17-4db9-a0b0-4432e1d3e11a)
-
 ## Continuous Delivery with ArgoCD
 
 In the project directory, install ArgoCD:
@@ -428,7 +420,72 @@ echo <encoded-password> | base64 --decode
 
 **Note: When copying the password, don't copy the `%` sign there**
 
+**Enter the password and access your ArgoCD portal:**
+
 ![GoProj18](https://github.com/user-attachments/assets/d97436a2-5bce-410b-873f-ad6b9b353158)
+
+**On the ArgoCD web UI:**
+
+Click "+ NEW APP"
+
+Then fill in:
+
+| Field                | Description                                                                  |
+| -------------------- | ---------------------------------------------------------------------------- |
+| **Application Name** | A unique name like `go-web-app`                                              |
+| **Project**          | Default (unless you've created a custom project)                             |
+| **Sync Policy**      | Automatic, then check `SELF-HEAL` box                                        |
+| **Repository URL**   | Select the Git repo of your project                                          |
+| **Revision**         | `main` or your branch name                                                   |
+| **Path**             | Relative path to the Helm chart (e.g., `helm/go-web-app-chart`)              |
+| **Cluster**          | Leave as `https://kubernetes.default.svc` (if ArgoCD is in the same cluster) |
+| **Namespace**        | The namespace where you want to deploy (e.g., `default`)                     |
+
+**Then scroll down and expand the Helm section:**
+ 
+**Values Files:** Argo CD will auto-detect `values.yaml` in the chart folder
+If you have multiple values files (e.g., values-prod.yaml, values-dev.yaml), you can:
+
+Click "Add Parameter" or
+
+Use `Values Files` section to add the correct file (e.g., values.yaml or values-prod.yaml).
+
+Click `Create` to finalize
+
+![GoProj19](https://github.com/user-attachments/assets/4ee10090-13f9-4919-a3d5-46f9b6150e7e)
+
+After the YAML files(`deployment.yaml`, `service.yaml`, `ingress.yaml`) have been deployed, I tested the full implementation:
+
+**Testing the CICD implementation, I edited my home page by adding my name:** 
+
+![GoProj26](https://github.com/user-attachments/assets/47c7b4fa-6574-4d37-964c-71bfb9a4b048)
+
+**Output of the edited home page:**
+
+![GoProj27](https://github.com/user-attachments/assets/41f882a6-ba17-4db9-a0b0-4432e1d3e11a)
+
+✅ Features: 
+✅ Lightweight Go web application
+
+✅ Dockerized for portability
+
+✅ CI/CD via GitHub Actions
+
+✅ GitOps deployment using Argo CD
+
+✅ Kubernetes native with Helm packaging
+
+
+
+📜 License
+This project is licensed under the MIT License.
+
+🙋‍♂️ Author
+Samuel Udeh
+Cloud/DevOps Engineer | [LinkedIn Profile](https://www.linkedin.com/in/samuel-udeh-19778a213/) | GitHub: [My GitHub Profile](https://github.com/SamuelUdeh)
+
+🤝 Contributions
+Feel free to fork, open issues, or pull requests to improve this project!
 
 
 
