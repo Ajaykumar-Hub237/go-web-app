@@ -363,9 +363,11 @@ git push origin main
 
 ![GoProj20](https://github.com/user-attachments/assets/68e35bb6-018c-4d3a-82da-40e41918c0be)
 
-**Testing the CI implementation, I edited my home page:** 
+**Testing the CI implementation, I edited my home page by adding my name:** 
 
 ![GoProj26](https://github.com/user-attachments/assets/47c7b4fa-6574-4d37-964c-71bfb9a4b048)
+
+**Output of the edited home page:**
 
 ![GoProj27](https://github.com/user-attachments/assets/41f882a6-ba17-4db9-a0b0-4432e1d3e11a)
 
