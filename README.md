@@ -371,6 +371,37 @@ git push origin main
 
 ![GoProj27](https://github.com/user-attachments/assets/41f882a6-ba17-4db9-a0b0-4432e1d3e11a)
 
+## Continuous Delivery with ArgoCD
+
+In the project directory, install ArgoCD:
+
+**Install Argo CD using manifests**
+
+```
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+```
+
+## TO Access the Argo CD UI (Loadbalancer service)
+
+```
+kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+```
+
+![GoProj15](https://github.com/user-attachments/assets/bd4deb57-951d-46df-8ca6-28126397e51a)
+
+## To Get the Loadbalancer service IP
+
+```
+kubectl get svc argocd-server -n argocd
+```
+
+![GoProj16](https://github.com/user-attachments/assets/5ce8866e-d85d-40db-b9d2-a311410d41f3)
+
+
+
+
+
 
 
 
