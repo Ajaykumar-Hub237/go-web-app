@@ -350,9 +350,12 @@ To enable continuous integration and push Docker images from GitHub Actions to D
 
 To trigger the pipeline, **push your changes** to the `main` **branch**:
 
+```
 git add .
 git commit -m "Your commit message"
 git push origin main
+```
+
 
 ![GoProj26](https://github.com/user-attachments/assets/47c7b4fa-6574-4d37-964c-71bfb9a4b048)
 
