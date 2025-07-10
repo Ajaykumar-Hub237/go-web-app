@@ -398,6 +398,38 @@ kubectl get svc argocd-server -n argocd
 
 ![GoProj16](https://github.com/user-attachments/assets/5ce8866e-d85d-40db-b9d2-a311410d41f3)
 
+**To access the ArgoCD portal:**
+
+https://<ArgoCD External IP>
+
+**The username is:** admin
+
+**To get the password:**
+
+```
+kubectl get secrets -n argocd
+```
+
+![GoProj17](https://github.com/user-attachments/assets/88c173ef-5107-4d3b-a244-23b5bbcbc229)
+
+**To edit the secret:**
+
+```
+kubectl edit secret argocd-initial-admin-secret -n argocd
+```
+
+**Here, you copy the encoded initial password:**
+
+**Then, use the command below to decode the password:**
+
+```
+echo <encoded-password> | base64 --decode
+```
+
+**Note: When copying the password, don't copy the `%` sign there**
+
+![GoProj18](https://github.com/user-attachments/assets/d97436a2-5bce-410b-873f-ad6b9b353158)
+
 
 
 
