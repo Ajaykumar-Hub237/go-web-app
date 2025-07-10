@@ -304,12 +304,14 @@ This project includes a CI workflow defined in the following YAML file:
 
 ## GitHub Secrets for CI/CD
 
-To enable continuous integration and DockerHub deployment through GitHub Actions, the following repository secrets must be configured:
+To enable continuous integration and push Docker images from GitHub Actions to DockerHub, and optionally push code or tags back to GitHub, configure the following secrets in your GitHub repository:
 
-| Secret Name          | Description                                                                                                                         |
-| -------------------- | ----------------------------------------------- |
-| `DOCKERHUB_USERNAME` | Your DockerHub username                                                                                                             |
-| `DOCKERHUB_TOKEN`    | DockerHub [personal access token](https://hub.docker.com/settings/security),
+| Secret Name          | Description                                                                                                |
+| -------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `DOCKERHUB_USERNAME` | Your DockerHub username                                                                                    |
+| `DOCKERHUB_TOKEN`    | DockerHub [personal access token](https://hub.docker.com/settings/security)                                |
+| `GH_TOKEN`           | GitHub [Personal Access Token (PAT)](https://github.com/settings/tokens) with `repo` and `workflow` scopes |
+
 
 ## How to Add Secrets to Your GitHub Repository
 
@@ -318,6 +320,9 @@ To enable continuous integration and DockerHub deployment through GitHub Actions
 **Go to Settings > Secrets and variables > Actions**.
 
 **Click "New repository secret" and input each of the above secrets.**
+
+![GoProjSecret](https://github.com/user-attachments/assets/b12fba4d-a4df-43d9-80c5-00b1c60035f6)
+
 
 
 
