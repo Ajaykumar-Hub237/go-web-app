@@ -307,7 +307,6 @@ This project includes a CI workflow defined in the following YAML file:
 **Builds & Tests the Application**
 
 -Compiles the Go app.
-
 -Runs unit tests using go test.
 
 **Performs Code Quality Checks**
@@ -316,15 +315,13 @@ This project includes a CI workflow defined in the following YAML file:
 
 **Builds and Pushes Docker Image**
 
-Builds the Docker image using Dockerfile.
-
-Pushes the image to DockerHub, tagged using the GitHub run ID for traceability.
+-Builds the Docker image using Dockerfile.
+-Pushes the image to DockerHub, tagged using the GitHub run ID for traceability.
 
 **Updates Helm Chart Automatically**
 
-Modifies the tag: field in helm/go-web-app-chart/values.yaml with the new image tag.
-
-Commits and pushes the change back to the repository.
+-Modifies the tag: field in helm/go-web-app-chart/values.yaml with the new image tag.
+-Commits and pushes the change back to the repository.
 
 
 ## GitHub Secrets for CI/CD
