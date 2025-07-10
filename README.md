@@ -302,6 +302,31 @@ This project includes a CI workflow defined in the following YAML file:
 
 [ci.yaml](https://github.com/SamuelUdeh/go-web-app/blob/main/.github/workflows/ci.yaml)
 
+This CI pipeline:
+
+## Builds & Tests the Application
+
+Compiles the Go app.
+
+Runs unit tests using go test.
+
+## Performs Code Quality Checks
+
+Uses golangci-lint to enforce code quality standards.
+
+## Builds and Pushes Docker Image
+
+Builds the Docker image using Dockerfile.
+
+Pushes the image to DockerHub, tagged using the GitHub run ID for traceability.
+
+## Updates Helm Chart Automatically
+
+Modifies the tag: field in helm/go-web-app-chart/values.yaml with the new image tag.
+
+Commits and pushes the change back to the repository.
+
+
 ## GitHub Secrets for CI/CD
 
 To enable continuous integration and push Docker images from GitHub Actions to DockerHub, and optionally push code or tags back to GitHub, configure the following secrets in your GitHub repository:
