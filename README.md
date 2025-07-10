@@ -426,7 +426,7 @@ echo <encoded-password> | base64 --decode
 
 **On the ArgoCD web UI:**
 
-Click "+ NEW APP"
+Click `+ NEW APP`
 
 Then fill in:
 
@@ -460,11 +460,15 @@ After the YAML files(`deployment.yaml`, `service.yaml`, `ingress.yaml`) have bee
 
 ![GoProj26](https://github.com/user-attachments/assets/47c7b4fa-6574-4d37-964c-71bfb9a4b048)
 
+![GoProj24](https://github.com/user-attachments/assets/08a32bbd-4f1c-4cf4-9da5-8d8d51f14bf9)
+
+
 **Output of the edited home page:**
 
 ![GoProj27](https://github.com/user-attachments/assets/41f882a6-ba17-4db9-a0b0-4432e1d3e11a)
 
 ✅ Features: 
+
 ✅ Lightweight Go web application
 
 ✅ Dockerized for portability
@@ -480,9 +484,11 @@ After the YAML files(`deployment.yaml`, `service.yaml`, `ingress.yaml`) have bee
 📜 License
 This project is licensed under the MIT License.
 
+
 🙋‍♂️ Author
 Samuel Udeh
 Cloud/DevOps Engineer | [LinkedIn Profile](https://www.linkedin.com/in/samuel-udeh-19778a213/) | GitHub: [My GitHub Profile](https://github.com/SamuelUdeh)
+
 
 🤝 Contributions
 Feel free to fork, open issues, or pull requests to improve this project!
