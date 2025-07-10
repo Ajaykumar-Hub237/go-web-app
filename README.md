@@ -302,6 +302,24 @@ This project includes a CI workflow defined in the following YAML file:
 
 [ci.yaml](https://github.com/SamuelUdeh/go-web-app/blob/main/.github/workflows/ci.yaml)
 
+## GitHub Secrets for CI/CD
+
+To enable continuous integration and DockerHub deployment through GitHub Actions, the following repository secrets must be configured:
+
+| Secret Name          | Description                                                                                                                         |
+| -------------------- | ----------------------------------------------- |
+| `DOCKERHUB_USERNAME` | Your DockerHub username                                                                                                             |
+| `DOCKERHUB_TOKEN`    | DockerHub [personal access token](https://hub.docker.com/settings/security),
+
+## How to Add Secrets to Your GitHub Repository
+
+**-Navigate to your GitHub repository.**
+
+**Go to Settings > Secrets and variables > Actions**.
+
+**Click "New repository secret" and input each of the above secrets.**
+
+
 
 
 
