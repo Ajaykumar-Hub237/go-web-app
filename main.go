@@ -26,6 +26,7 @@ func contactPage(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	log.Println("🔥 Go web server starting on port 8080...") // New log line to confirm startup
 
 	http.HandleFunc("/", homePage)
 	http.HandleFunc("/home", homePage)
@@ -35,6 +36,6 @@ func main() {
 
 	err := http.ListenAndServe("0.0.0.0:8080", nil)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalf("Server failed to start: %v", err) // Better error visibility
 	}
 }
