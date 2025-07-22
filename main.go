@@ -41,3 +41,4 @@ func main() {
 }
 // Triggering workflow manually
 // Token updated, triggering CI
+// DockerHub token updated
