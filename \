@@ -1,0 +1,15 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+data:
+  password: MTZzM1NLdEdOdnk0U01mOQ==
+kind: Secret
+metadata:
+  creationTimestamp: "2025-07-22T13:09:17Z"
+  name: argocd-initial-admin-secret
+  namespace: argocd
+  resourceVersion: "68838"
+  uid: 6ddb91e0-297b-448d-b00e-300cd46a2aaf
+type: Opaque
