@@ -39,3 +39,4 @@ func main() {
 		log.Fatalf("Server failed to start: %v", err) // Better error visibility
 	}
 }
+// Triggering workflow manually
