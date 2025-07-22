@@ -525,3 +525,4 @@ Feel free to fork, open issues, or pull requests to improve this project!
 
 
 # Trigger after enabling Actions
+# Trigger CI manually
